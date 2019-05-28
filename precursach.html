@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>Dooptha – Backend Presentation</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
@@ -33,9 +33,7 @@
                         Тема:
                     </strong>
                     <q>
-                        Проектування та розробка серверної частини
-                        багатокористувацької гри в реальному часі з
-                        використанням <strong>Unreal Engine 4</strong>
+                        Багатокористувацька гра в реальному часі з використанням <strong>Unreal Engine 4</strong>: серверна частина
                     </q>
             </p>
             <br/>
@@ -47,7 +45,42 @@
                     <strong>Керівник:</strong> Піголь Володимир</small>
             </p>
         </section>
-        <section>Slide 2</section>
+        <section>
+            <h2>Dooptha Game - це:</h2>
+            <ul>
+                <li>Багатокористувацька гра</li>
+                <li  class="fragment">в жанрі <strong>RPG</strong>(role-playing game) екшн</li>
+                <li  class="fragment">на мобільні платформи</li>
+                <li  class="fragment">розроблена з допомогою <strong>Unreal Engine 4</strong></li>
+            </ul>
+            <p class="fragment"> <strong>==</strong> <br/> відсутні конкуренти <small>(майже)</small></p>
+        </section>
+        <section data-background-color="#FFFFFF" data-transition="zoom">
+            <h2>AWS Архітектура</h2>
+            <img src="media/photo_2019-05-28_20-18-14.jpg" style="border: none; box-shadow: none";/>
+        </section>
+        <section>
+            <h2>Наш Backend</h2>
+            <img style="border: none; max-height: 500px; box-shadow: none;" src="media/Diagram.png"/>
+        </section>
+        <section>
+            <h3>Наш Backend + AWS Архітектура</h3>
+            <img style="border: none; max-height: 500px; box-shadow: none;" src="media/Screenshot_1.png"/>
+        </section>
+        <section>
+            <h3>Devtools. Розгортання серверу</h3>
+            <ol>
+                <li>Збірка виділеного сервера на <strong>Linux</strong></li>
+                <li  class="fragment">Завантаження <strong>*.zip</strong> файла на сервер <strong>EC2</strong></li>
+                <li  class="fragment">Запуск виконуючого файлу на фоні</li>
+                <li  class="fragment">Збір логів та метриків використання ресурсів</li>
+            </ol>
+        </section>
+        <section data-background-iframe="http://52.47.174.139:5000/" data-background-color="#FFFFFF"></section>
+        <section data-background="#FFFFFF" data-transition="zoom">
+            <h2>Дякую за увагу!</h2>
+            <img src="media/qrcode.jpg"/>
+        </section>
     </div>
 </div>
 
@@ -61,6 +94,7 @@
     dependencies: [
       {src: 'plugin/markdown/marked.js'},
       {src: 'plugin/markdown/markdown.js'},
+      {src: 'plugin/zoom-js/zoom.js'},
       {src: 'plugin/notes/notes.js', async: true},
       {src: 'plugin/highlight/highlight.js', async: true}
     ]
