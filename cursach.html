@@ -27,65 +27,81 @@
 <div class="reveal">
     <div class="slides">
         <section>
-            <h2>Dooptha. Backend Solutions</h2>
             <p>
-                    <strong>
-                        Тема:
-                    </strong>
-                    <q>
-                        Багатокористувацька гра в реальному часі з використанням <strong>Unreal Engine 4</strong>: серверна частина
-                    </q>
+                <strong>
+                    Тема кваліфікаційної роботи:
+                </strong>
+                <br>
+                Багатокористувацька гра в реальному часі з використанням
+                <strong>Unreal Engine 4</strong>: серверна частина
+
             </p>
             <br/>
             <p>
                 <small>
-                    <strong>Виконав:</strong> Піголь Володимир Миколайович</small>
+                    <strong>Виконав:</strong> Піголь Володимир Миколайович
+                </small>
                 <br/>
                 <small>
-                    <strong>Керівник:</strong> Мартинюк Петро Миколайович</small>
+                    <strong>Керівник:</strong> Мартинюк Петро Миколайович
+                </small>
             </p>
         </section>
         <section>
             <h2>Dooptha Game - це:</h2>
             <ul>
                 <li>Багатокористувацька гра</li>
-                <li  class="fragment">в жанрі <strong>RPG</strong>(role-playing game) екшн</li>
-                <li  class="fragment">на мобільні платформи</li>
-                <li  class="fragment">розроблена з допомогою <strong>Unreal Engine 4</strong></li>
+                <li class="fragment">в жанрі <strong>RPG</strong>(role-playing
+                    game) екшн
+                </li>
+                <li class="fragment">на мобільні платформи</li>
+                <li class="fragment">розроблена з допомогою <strong>Unreal
+                    Engine 4</strong></li>
             </ul>
-            <p class="fragment"> <strong>==</strong> <br/> відсутні конкуренти <small>(майже)</small></p>
+            <p class="fragment"><strong>==</strong> <br/> відсутні конкуренти
+                <small>(майже)</small>
+            </p>
         </section>
         <section>
             <h3>Завдання</h3>
             <ol>
-                <li>Пректування архітектури</li>
-                <li>Розробка необхідних мікросервісів</li>
-                <li>Працездатність в режимі <strong>production</strong></li>
+                <li>Організаційні питання</li>
+                <li>Проектування архітектури</li>
+                <li>Створення іструментів розробки</li>
+                <li>Забеспечення працездатності системи</li>
             </ol>
         </section>
-        <section data-background-color="#FFFFFF" data-transition="zoom">
-            <h2>AWS Архітектура</h2>
-            <img src="media/photo_2019-05-28_20-18-14.jpg" style="border: none; box-shadow: none";/>
+        <section>
+            <h4>Серврна частина</h4>
+            <img style="border: none; max-height: 500px; box-shadow: none;"
+                 src="media/Diagram.png"/>
         </section>
         <section>
-            <h2>Наш Backend</h2>
-            <img style="border: none; max-height: 500px; box-shadow: none;" src="media/Diagram.png"/>
-        </section>
-        <section>
-            <h3>Наш Backend + AWS Архітектура</h3>
-            <img style="background: transparent; border: none; max-height: 500px; box-shadow: none;" src="media/Screenshot_1%20copy.png"/>
+            <h4>Фінальна архітектура</h4>
+            <img style="background: transparent; border: none; max-height: 500px; box-shadow: none;"
+                 src="media/Screenshot_1%20copy.png"/>
         </section>
         <section>
             <h3>Devtools. Розгортання серверу</h3>
             <ol>
                 <li>Збірка виділеного сервера на <strong>Linux</strong></li>
-                <li  class="fragment">Завантаження <strong>*.zip</strong> файла на сервер <strong>EC2</strong></li>
-                <li  class="fragment">Запуск виконуючого файлу на фоні</li>
-                <li  class="fragment">Збір логів та метриків використання ресурсів</li>
+                <li class="fragment">Завантаження <strong>*.zip</strong> файла
+                    на сервер <strong>EC2</strong></li>
+                <li class="fragment">Запуск виконуючого файлу на фоні</li>
+                <li class="fragment">Збір логів та метриків використання
+                    ресурсів
+                </li>
             </ol>
         </section>
-        <section data-background-iframe="http://52.47.174.139:5000/" data-background-color="#FFFFFF"></section>
-        <section data-background="#FFFFFF" data-transition="zoom">
+        <section data-background-iframe="http://52.47.174.139:5000/"
+                 data-background-color="#FFFFFF"></section>
+        <section data-background-color="#FFFFFF"
+                 data-background-image="http://nuwm.edu.ua/images/logo_nuwm2.png"
+                 data-background-position="3% 3%"
+                 data-background-repeat="no-repeat"
+                 data-background-size="auto"
+                 data-transition="zoom"
+        >
             <h2>Дякую за увагу!</h2>
             <img src="media/qrcode.jpg"/>
         </section>
@@ -99,6 +115,7 @@
   // - https://github.com/hakimel/reveal.js#configuration
   // - https://github.com/hakimel/reveal.js#dependencies
   Reveal.initialize({
+    slideNumber: true,
     spotlight: {
 
       // size of the spotlight
@@ -140,10 +157,12 @@
     keyboard: {
       // alternative to toggleSpotlightOnMouseDown:
       // toggle spotlight by pressing key 'c'
-      67: function() { RevealSpotlight.toggleSpotlight() },
+      67: function () {
+        RevealSpotlight.toggleSpotlight()
+      },
 
       // enter/leave presentation mode by pressing key 'p'
-      80: function() {
+      80: function () {
         RevealSpotlight.togglePresentationMode();
       },
     },

@@ -11,11 +11,23 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-    background: url("../../media/background.png");
-    background-position: center center;
+    background: url("../../media/logo_white.png");
+    background-position: 3% 3%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-color: #004861;
+}
+
+.reveal .slide-number {
+    top: 2%;
+    right: 2%;
+    bottom: auto;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.reveal .slide-number .slide-number-a {
+    font-size: 32px;
 }
 
 .reveal {
