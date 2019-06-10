@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ua,en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Dooptha – Backend Presentation</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/nuwm.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>Dooptha. Backend Solutions</h2>
+            <p>
+                    <strong>
+                        Тема:
+                    </strong>
+                    <q>
+                        Багатокористувацька гра в реальному часі з використанням <strong>Unreal Engine 4</strong>: серверна частина
+                    </q>
+            </p>
+            <br/>
+            <p>
+                <small>
+                    <strong>Виконав:</strong> Піголь Володимир Миколайович</small>
+                <br/>
+                <small>
+                    <strong>Керівник:</strong> Мартинюк Петро Миколайович</small>
+            </p>
+        </section>
+        <section>
+            <h2>Dooptha Game - це:</h2>
+            <ul>
+                <li>Багатокористувацька гра</li>
+                <li  class="fragment">в жанрі <strong>RPG</strong>(role-playing game) екшн</li>
+                <li  class="fragment">на мобільні платформи</li>
+                <li  class="fragment">розроблена з допомогою <strong>Unreal Engine 4</strong></li>
+            </ul>
+            <p class="fragment"> <strong>==</strong> <br/> відсутні конкуренти <small>(майже)</small></p>
+        </section>
+        <section>
+            <h3>Завдання</h3>
+            <ol>
+                <li>Пректування архітектури</li>
+                <li>Розробка необхідних мікросервісів</li>
+                <li>Працездатність в режимі <strong>production</strong></li>
+            </ol>
+        </section>
+        <section data-background-color="#FFFFFF" data-transition="zoom">
+            <h2>AWS Архітектура</h2>
+            <img src="media/photo_2019-05-28_20-18-14.jpg" style="border: none; box-shadow: none";/>
+        </section>
+        <section>
+            <h2>Наш Backend</h2>
+            <img style="border: none; max-height: 500px; box-shadow: none;" src="media/Diagram.png"/>
+        </section>
+        <section>
+            <h3>Наш Backend + AWS Архітектура</h3>
+            <img style="background: transparent; border: none; max-height: 500px; box-shadow: none;" src="media/Screenshot_1%20copy.png"/>
+        </section>
+        <section>
+            <h3>Devtools. Розгортання серверу</h3>
+            <ol>
+                <li>Збірка виділеного сервера на <strong>Linux</strong></li>
+                <li  class="fragment">Завантаження <strong>*.zip</strong> файла на сервер <strong>EC2</strong></li>
+                <li  class="fragment">Запуск виконуючого файлу на фоні</li>
+                <li  class="fragment">Збір логів та метриків використання ресурсів</li>
+            </ol>
+        </section>
+        <section data-background-iframe="http://52.47.174.139:5000/" data-background-color="#FFFFFF"></section>
+        <section data-background="#FFFFFF" data-transition="zoom">
+            <h2>Дякую за увагу!</h2>
+            <img src="media/qrcode.jpg"/>
+        </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    spotlight: {
+
+      // size of the spotlight
+      size: 60,
+
+      // true: Locks the mouse pointer inside the presentation
+      // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+      // displayed regardless of the configured values
+      lockPointerInsideCanvas: false,
+
+      // toggle spotlight by holding down the mouse key
+      toggleSpotlightOnMouseDown: false,
+
+      // the keyCode pressed and held to turn on spotlight, disabled when set to false
+      // Problems with this config? Maybe your touchpad is disabled on keypress?
+      spotlightOnKeyPressAndHold: true,
+
+      // choose the cursor when spotlight is on. Maybe "crosshair"?
+      spotlightCursor: 'none',
+
+      // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+      presentingCursor: 'default',
+
+      // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+      initialPresentationMode: true,
+
+      // true: disable selecting in presentation mode
+      disablingUserSelect: true,
+
+      // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+      fadeInAndOut: 100,
+
+      // enable pointer mode
+      useAsPointer: false,
+
+      // pointer color (If pointer mode enabled)
+      pointerColor: 'red'
+    },
+    keyboard: {
+      // alternative to toggleSpotlightOnMouseDown:
+      // toggle spotlight by pressing key 'c'
+      67: function() { RevealSpotlight.toggleSpotlight() },
+
+      // enter/leave presentation mode by pressing key 'p'
+      80: function() {
+        RevealSpotlight.togglePresentationMode();
+      },
+    },
+    dependencies: [
+      {src: 'plugin/markdown/marked.js'},
+      {src: 'plugin/markdown/markdown.js'},
+      {src: 'plugin/spotlight/spotlight.js'},
+      {src: 'plugin/zoom-js/zoom.js'},
+      {src: 'plugin/notes/notes.js', async: true},
+      {src: 'plugin/highlight/highlight.js', async: true}
+    ]
+  });
+</script>
+</body>
+</html>
