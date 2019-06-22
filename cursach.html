@@ -51,14 +51,14 @@
             <h2>Dooptha Game - це:</h2>
             <ul>
                 <li>Багатокористувацька гра</li>
-                <li class="fragment">в жанрі <strong>RPG</strong>(role-playing
+                <li>в жанрі <strong>RPG</strong>(role-playing
                     game) екшн
                 </li>
-                <li class="fragment">на мобільні платформи</li>
-                <li class="fragment">розроблена з допомогою <strong>Unreal
+                <li>на мобільні платформи</li>
+                <li>розроблена з допомогою <strong>Unreal
                     Engine 4</strong></li>
             </ul>
-            <p class="fragment"><strong>==</strong> <br/> відсутні конкуренти
+            <p><strong>==</strong> <br/> відсутні конкуренти
                 <small>(майже)</small>
             </p>
         </section>
@@ -67,18 +67,26 @@
             <ol>
                 <li>Організаційні питання</li>
                 <li>Проектування архітектури</li>
-                <li>Створення іструментів розробки</li>
+                <li>Розробка серверної частини</li>
                 <li>Забеспечення працездатності системи</li>
             </ol>
         </section>
         <section>
             <h3>Технології</h3>
             <ol>
+                <li>Node.js + Express.js</li>
                 <li>React.js</li>
-                <li>Node.js Microservices + RabbitMQ</li>
-                <li>NoSQL + MongoDB</li>
-                <li>Docker + AWS</li>
+                <li>NoSQL</li>
+                <li>Rabbit.mq + Microservices + Docker + AWS</li>
             </ol>
+        </section>
+        <section>
+            <h4>Схема комунікація</h4>
+            <img style="max-height: 60vh; border: 5px solid white; border-radius: 5px" src="media/schema.jpg"/>
+        </section>
+        <section>
+            <h4>Безпека та Stateless запити</h4>
+            <img style="border: none;  border-radius: 5px" src="media/stateless.png"/>
         </section>
         <section>
             <h4>Завдання сервера</h4>
@@ -86,24 +94,24 @@
                  src="media/Diagram.png"/>
         </section>
         <section>
-            <h4>Фінальна архітектура</h4>
-            <img style="background: transparent; border: none; max-height: 500px; box-shadow: none;"
-                 src="media/Scheme.png"/>
-        </section>
-        <section>
             <h3>Devtools. Розгортання серверу</h3>
             <ol>
                 <li>Збірка виділеного сервера на <strong>Linux</strong></li>
-                <li class="fragment">Завантаження <strong>*.zip</strong> файла
+                <li>Завантаження <strong>*.zip</strong> файла
                     на сервер <strong>EC2</strong></li>
-                <li class="fragment">Запуск виконуючого файлу на фоні</li>
-                <li class="fragment">Збір логів та метриків використання
+                <li>Запуск виконуючого файлу на фоні</li>
+                <li>Збір логів та метриків використання
                     ресурсів
                 </li>
             </ol>
         </section>
-        <section data-background-iframe="http://52.47.174.139:5000/"
+        <section data-background-iframe="https://api.dooptha.com/"
                  data-background-color="#FFFFFF"></section>
+        <section>
+            <h4>Фінальна архітектура</h4>
+            <img style="background: transparent; border: none; max-height: 60vh; box-shadow: none;"
+                 src="media/Scheme.png"/>
+        </section>
         <section data-background-color="#FFFFFF"
                  data-background-image="http://nuwm.edu.ua/images/logo_nuwm2.png"
                  data-background-position="3% 3%"
